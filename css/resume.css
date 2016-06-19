@@ -473,10 +473,64 @@ html{
     -webkit-animation: imgScale 1s 1 both;
 }
 #page1 .inner .container li:nth-child(2){
-    animation: flop 0.5s 1 1s both;
-    -webkit-animation: flop 0.5s 1 .5s both;
+  /*  animation: flop 0.5s 1 1s both;
+    -webkit-animation: flop 0.5s 1 .5s both;*/
+    animation:swing .5s 3 1s both;
+   -webkit-animation:swing .5s 3 1s both;
+}
+@-webkit-keyframes swing {
+    20% {
+        -webkit-transform: rotate3d(0, 0, 1, 15deg);
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+
+    40% {
+        -webkit-transform: rotate3d(0, 0, 1, -10deg);
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+
+    60% {
+        -webkit-transform: rotate3d(0, 0, 1, 5deg);
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+
+    80% {
+        -webkit-transform: rotate3d(0, 0, 1, -5deg);
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+
+    to {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
 }
 
+@keyframes swing {
+    20% {
+        -webkit-transform: rotate3d(0, 0, 1, 15deg);
+        transform: rotate3d(0, 0, 1, 15deg);
+    }
+
+    40% {
+        -webkit-transform: rotate3d(0, 0, 1, -10deg);
+        transform: rotate3d(0, 0, 1, -10deg);
+    }
+
+    60% {
+        -webkit-transform: rotate3d(0, 0, 1, 5deg);
+        transform: rotate3d(0, 0, 1, 5deg);
+    }
+
+    80% {
+        -webkit-transform: rotate3d(0, 0, 1, -5deg);
+        transform: rotate3d(0, 0, 1, -5deg);
+    }
+
+    to {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
 
 
 
@@ -958,8 +1012,7 @@ html{
     line-height: 1.25rem;
     text-align: center;
     position: absolute;
-    background-image:url("../img/four_3.png");
-    background-repeat: no-repeat;
+    background:url("../img/four_3.png") no-repeat center;
     opacity: 0.7;
     animation: spanRo 2s 1 ease both;
 }
